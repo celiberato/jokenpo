@@ -1,0 +1,1371 @@
+{
+	"info": {
+		"_postman_id": "d90363a2-7d40-470b-86ab-7217498adea7",
+		"name": "jokenpo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "JOGADORES",
+					"item": [
+						{
+							"name": "adicionar jogador - nenhum jogador cadastrado",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "R07NfMKH",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "poupatempo.rgdigital",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Basic YWRtaW46YWRtaW4=",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1588797475337,\r\n    \"jogadorIniciador\": {\r\n        \"id\": 1588797475337,\r\n        \"nomeJogador\": \"Mario\"\r\n    },\r\n    \"jogadores\": [],\r\n    \"jogadas\": []\r\n}"
+								},
+								"url": {
+									"raw": "http://200.98.173.74:3034/jokenpo/adicionarJogador/?nomeJogador=Marcela",
+									"protocol": "http",
+									"host": [
+										"200",
+										"98",
+										"173",
+										"74"
+									],
+									"port": "3034",
+									"path": [
+										"jokenpo",
+										"adicionarJogador",
+										""
+									],
+									"query": [
+										{
+											"key": "nomeJogador",
+											"value": "Marcela"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "adicionar jogador - 1 jogador já cadastrado",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "R07NfMKH",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "poupatempo.rgdigital",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Basic YWRtaW46YWRtaW4=",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1588797475337,\r\n    \"jogadorIniciador\": {\r\n        \"id\": 1588797475337,\r\n        \"nomeJogador\": \"Mario\"\r\n    },\r\n     \"jogadores\": [\r\n        {\r\n            \"id\": 1588799167474,\r\n            \"nomeJogador\": \"Marcela\"\r\n        }\r\n    ],\r\n    \"jogadas\": []\r\n}"
+								},
+								"url": {
+									"raw": "http://200.98.173.74:3034/jokenpo/adicionarJogador/?nomeJogador=Flavio",
+									"protocol": "http",
+									"host": [
+										"200",
+										"98",
+										"173",
+										"74"
+									],
+									"port": "3034",
+									"path": [
+										"jokenpo",
+										"adicionarJogador",
+										""
+									],
+									"query": [
+										{
+											"key": "nomeJogador",
+											"value": "Flavio"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "adicionar jogador - 2 jogadores já cadastrados",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "R07NfMKH",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "poupatempo.rgdigital",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Basic YWRtaW46YWRtaW4=",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1588797475337,\r\n    \"jogadorIniciador\": {\r\n        \"id\": 1588797475337,\r\n        \"nomeJogador\": \"Mario\"\r\n    },\r\n    \"jogadores\": [\r\n        {\r\n            \"id\": 1588799167474,\r\n            \"nomeJogador\": \"Marcela\"\r\n        },\r\n        {\r\n            \"id\": 1588799683645,\r\n            \"nomeJogador\": \"Flavio\"\r\n        }\r\n    ],\r\n    \"jogadas\": []\r\n}"
+								},
+								"url": {
+									"raw": "http://200.98.173.74:3034/jokenpo/adicionarJogador/?nomeJogador=Mauro",
+									"protocol": "http",
+									"host": [
+										"200",
+										"98",
+										"173",
+										"74"
+									],
+									"port": "3034",
+									"path": [
+										"jokenpo",
+										"adicionarJogador",
+										""
+									],
+									"query": [
+										{
+											"key": "nomeJogador",
+											"value": "Mauro"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "adicionar jogador - jogador já informado",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "R07NfMKH",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "poupatempo.rgdigital",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Basic YWRtaW46YWRtaW4=",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1588797475337,\r\n    \"jogadorIniciador\": {\r\n        \"id\": 1588797475337,\r\n        \"nomeJogador\": \"Mario\"\r\n    },\r\n    \"jogadores\": [\r\n        {\r\n            \"id\": 1588799167474,\r\n            \"nomeJogador\": \"Marcela\"\r\n        },\r\n        {\r\n            \"id\": 1588799683645,\r\n            \"nomeJogador\": \"Flavio\"\r\n        }\r\n    ],\r\n    \"jogadas\": []\r\n}"
+								},
+								"url": {
+									"raw": "http://200.98.173.74:3034/jokenpo/adicionarJogador/?nomeJogador=Flavio",
+									"protocol": "http",
+									"host": [
+										"200",
+										"98",
+										"173",
+										"74"
+									],
+									"port": "3034",
+									"path": [
+										"jokenpo",
+										"adicionarJogador",
+										""
+									],
+									"query": [
+										{
+											"key": "nomeJogador",
+											"value": "Flavio"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "JOGADAS",
+					"item": [
+						{
+							"name": "adicionar jogada - nenhum jogada cadastrado",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "R07NfMKH",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "poupatempo.rgdigital",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Basic YWRtaW46YWRtaW4=",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1588797475337,\r\n    \"jogadorIniciador\": {\r\n        \"id\": 1588797475337,\r\n        \"nomeJogador\": \"Mario\"\r\n    },\r\n    \"jogadores\": [],\r\n    \"jogadas\": []\r\n}"
+								},
+								"url": {
+									"raw": "http://200.98.173.74:3034/jokenpo/adicionarJogada/?nomeJogada=Marcela&objeto=papel",
+									"protocol": "http",
+									"host": [
+										"200",
+										"98",
+										"173",
+										"74"
+									],
+									"port": "3034",
+									"path": [
+										"jokenpo",
+										"adicionarJogada",
+										""
+									],
+									"query": [
+										{
+											"key": "nomeJogada",
+											"value": "Marcela"
+										},
+										{
+											"key": "objeto",
+											"value": "papel"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "adicionar jogada - 1 jogadas já cadastrado",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "R07NfMKH",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "poupatempo.rgdigital",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Basic YWRtaW46YWRtaW4=",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1588797475337,\r\n    \"jogadorIniciador\": {\r\n        \"id\": 1588797475337,\r\n        \"nomeJogador\": \"Mario\"\r\n    },\r\n     \"jogadores\": [\r\n        {\r\n            \"id\": 1588799167474,\r\n            \"nomeJogador\": \"Marcela\"\r\n        }\r\n    ],\r\n    \"jogadas\": [\r\n        {\r\n            \"id\": 1588803269562,\r\n            \"objeto\": \"papel\",\r\n            \"jogador\": {\r\n                \"id\": 1588803269562,\r\n                \"nomeJogador\": \"Marcela\"\r\n            }\r\n        }\r\n    ]\r\n}"
+								},
+								"url": {
+									"raw": "http://200.98.173.74:3034/jokenpo/adicionarJogada/?nomeJogador=Mario&objeto=pedra",
+									"protocol": "http",
+									"host": [
+										"200",
+										"98",
+										"173",
+										"74"
+									],
+									"port": "3034",
+									"path": [
+										"jokenpo",
+										"adicionarJogada",
+										""
+									],
+									"query": [
+										{
+											"key": "nomeJogador",
+											"value": "Mario"
+										},
+										{
+											"key": "objeto",
+											"value": "pedra"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "adicionar jogada - 2 jogadas já cadastrados",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "R07NfMKH",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "poupatempo.rgdigital",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Basic YWRtaW46YWRtaW4=",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1588797475337,\r\n    \"jogadorIniciador\": {\r\n        \"id\": 1588797475337,\r\n        \"nomeJogador\": \"Mario\"\r\n    },\r\n    \"jogadores\": [\r\n        {\r\n            \"id\": 1588799167474,\r\n            \"nomeJogador\": \"Marcela\"\r\n        },\r\n        {\r\n            \"id\": 1588799683645,\r\n            \"nomeJogador\": \"Flavio\"\r\n        }\r\n    ],\r\n    \"jogadas\": [\r\n        {\r\n            \"id\": 1588803269562,\r\n            \"objeto\": \"papel\",\r\n            \"jogador\": {\r\n                \"id\": 1588803269562,\r\n                \"nomeJogador\": \"Marcela\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": 1588803324421,\r\n            \"objeto\": \"pedra\",\r\n            \"jogador\": {\r\n                \"id\": 1588803324421,\r\n                \"nomeJogador\": \"Mario\"\r\n            }\r\n        }\r\n    ]\r\n}"
+								},
+								"url": {
+									"raw": "http://200.98.173.74:3034/jokenpo/adicionarJogada/?nomeJogador=Murilo&objeto=pedra",
+									"protocol": "http",
+									"host": [
+										"200",
+										"98",
+										"173",
+										"74"
+									],
+									"port": "3034",
+									"path": [
+										"jokenpo",
+										"adicionarJogada",
+										""
+									],
+									"query": [
+										{
+											"key": "nomeJogador",
+											"value": "Murilo"
+										},
+										{
+											"key": "objeto",
+											"value": "pedra"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "adicionar jogada - jogador não cadastrado",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "R07NfMKH",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "poupatempo.rgdigital",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Basic YWRtaW46YWRtaW4=",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1588797475337,\r\n    \"jogadorIniciador\": {\r\n        \"id\": 1588797475337,\r\n        \"nomeJogador\": \"Mario\"\r\n    },\r\n    \"jogadores\": [\r\n        {\r\n            \"id\": 1588799167474,\r\n            \"nomeJogador\": \"Marcela\"\r\n        },\r\n        {\r\n            \"id\": 1588799683645,\r\n            \"nomeJogador\": \"Flavio\"\r\n        }\r\n    ],\r\n    \"jogadas\": []\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3034/jokenpo/adicionarJogada/?nomeJogador=NaoCadastrado&objeto=papel",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3034",
+									"path": [
+										"jokenpo",
+										"adicionarJogada",
+										""
+									],
+									"query": [
+										{
+											"key": "nomeJogador",
+											"value": "NaoCadastrado"
+										},
+										{
+											"key": "objeto",
+											"value": "papel"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "adicionar jogada - jogada inválida",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "R07NfMKH",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "poupatempo.rgdigital",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Basic YWRtaW46YWRtaW4=",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1588797475337,\r\n    \"jogadorIniciador\": {\r\n        \"id\": 1588797475337,\r\n        \"nomeJogador\": \"Mario\"\r\n    },\r\n    \"jogadores\": [\r\n        {\r\n            \"id\": 1588799167474,\r\n            \"nomeJogador\": \"Marcela\"\r\n        },\r\n        {\r\n            \"id\": 1588799683645,\r\n            \"nomeJogador\": \"Flavio\"\r\n        }\r\n    ],\r\n    \"jogadas\": []\r\n}"
+								},
+								"url": {
+									"raw": "http://200.98.173.74:3034/jokenpo/adicionarJogada/?nomeJogador=Marcela&objeto=INVALIDO",
+									"protocol": "http",
+									"host": [
+										"200",
+										"98",
+										"173",
+										"74"
+									],
+									"port": "3034",
+									"path": [
+										"jokenpo",
+										"adicionarJogada",
+										""
+									],
+									"query": [
+										{
+											"key": "nomeJogador",
+											"value": "Marcela"
+										},
+										{
+											"key": "objeto",
+											"value": "INVALIDO"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "f781e33f-14a0-4bc1-a787-a9c48d8358e8",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "9912ef84-da2f-4cc0-b8a2-09bb0eee3deb",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "DELETE",
+			"item": [
+				{
+					"name": "JOGADORES",
+					"item": [
+						{
+							"name": "remover jogador - 2 jogadores já cadastrados",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "R07NfMKH",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "poupatempo.rgdigital",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Basic YWRtaW46YWRtaW4=",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1588797475337,\r\n    \"jogadorIniciador\": {\r\n        \"id\": 1588797475337,\r\n        \"nomeJogador\": \"Mario\"\r\n    },\r\n    \"jogadores\": [\r\n        {\r\n            \"id\": 1588799167474,\r\n            \"nomeJogador\": \"Marcela\"\r\n        },\r\n        {\r\n            \"id\": 1588799772688,\r\n            \"nomeJogador\": \"Mauro\"\r\n        }\r\n    ],\r\n    \"jogadas\": []\r\n}"
+								},
+								"url": {
+									"raw": "http://200.98.173.74:3034/jokenpo/removerJogador/?nomeJogador=Mauro",
+									"protocol": "http",
+									"host": [
+										"200",
+										"98",
+										"173",
+										"74"
+									],
+									"port": "3034",
+									"path": [
+										"jokenpo",
+										"removerJogador",
+										""
+									],
+									"query": [
+										{
+											"key": "nomeJogador",
+											"value": "Mauro"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "remover jogador - 3 jogadores já cadastrados",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "R07NfMKH",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "poupatempo.rgdigital",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Basic YWRtaW46YWRtaW4=",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1588797475337,\r\n    \"jogadorIniciador\": {\r\n        \"id\": 1588797475337,\r\n        \"nomeJogador\": \"Mario\"\r\n    },\r\n    \"jogadores\": [\r\n        {\r\n            \"id\": 1588799167474,\r\n            \"nomeJogador\": \"Marcela\"\r\n        },\r\n        {\r\n            \"id\": 1588799683645,\r\n            \"nomeJogador\": \"Flavio\"\r\n        },\r\n        {\r\n            \"id\": 1588799772688,\r\n            \"nomeJogador\": \"Mauro\"\r\n        }\r\n    ],\r\n    \"jogadas\": []\r\n}"
+								},
+								"url": {
+									"raw": "http://200.98.173.74:3034/jokenpo/removerJogador/?nomeJogador=Marcela",
+									"protocol": "http",
+									"host": [
+										"200",
+										"98",
+										"173",
+										"74"
+									],
+									"port": "3034",
+									"path": [
+										"jokenpo",
+										"removerJogador",
+										""
+									],
+									"query": [
+										{
+											"key": "nomeJogador",
+											"value": "Marcela"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "remover jogador - 3 jogadores já cadastrados - jogador inexiste",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "R07NfMKH",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "poupatempo.rgdigital",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Basic YWRtaW46YWRtaW4=",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1588797475337,\r\n    \"jogadorIniciador\": {\r\n        \"id\": 1588797475337,\r\n        \"nomeJogador\": \"Mario\"\r\n    },\r\n    \"jogadores\": [\r\n        {\r\n            \"id\": 1588799167474,\r\n            \"nomeJogador\": \"Marcela\"\r\n        },\r\n        {\r\n            \"id\": 1588799683645,\r\n            \"nomeJogador\": \"Flavio\"\r\n        },\r\n        {\r\n            \"id\": 1588799772688,\r\n            \"nomeJogador\": \"Mauro\"\r\n        }\r\n    ],\r\n    \"jogadas\": []\r\n}"
+								},
+								"url": {
+									"raw": "http://200.98.173.74:3034/jokenpo/removerJogador/?nomeJogador=xxxxxxxxxxxxxx",
+									"protocol": "http",
+									"host": [
+										"200",
+										"98",
+										"173",
+										"74"
+									],
+									"port": "3034",
+									"path": [
+										"jokenpo",
+										"removerJogador",
+										""
+									],
+									"query": [
+										{
+											"key": "nomeJogador",
+											"value": "xxxxxxxxxxxxxx"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "JOGADAS",
+					"item": [
+						{
+							"name": "remover jogada - 2 jogadas já cadastrados",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "R07NfMKH",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "poupatempo.rgdigital",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Basic YWRtaW46YWRtaW4=",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1588797475337,\r\n    \"jogadorIniciador\": {\r\n        \"id\": 1588797475337,\r\n        \"nomeJogador\": \"Mario\"\r\n    },\r\n    \"jogadores\": [\r\n        {\r\n            \"id\": 1588799167474,\r\n            \"nomeJogador\": \"Marcela\"\r\n        },\r\n        {\r\n            \"id\": 1588799772688,\r\n            \"nomeJogador\": \"Mauro\"\r\n        }\r\n    ],\r\n    \"jogadas\": [\r\n        {\r\n            \"id\": 1588803269562,\r\n            \"objeto\": \"papel\",\r\n            \"jogador\": {\r\n                \"id\": 1588803269562,\r\n                \"nomeJogador\": \"Marcela\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": 1588803324421,\r\n            \"objeto\": \"pedra\",\r\n            \"jogador\": {\r\n                \"id\": 1588803324421,\r\n                \"nomeJogador\": \"Mario\"\r\n            }\r\n        }\r\n    ]}"
+								},
+								"url": {
+									"raw": "http://200.98.173.74:3034/jokenpo/removerJogada/?nomeJogador=Mario&objeto=pedra",
+									"protocol": "http",
+									"host": [
+										"200",
+										"98",
+										"173",
+										"74"
+									],
+									"port": "3034",
+									"path": [
+										"jokenpo",
+										"removerJogada",
+										""
+									],
+									"query": [
+										{
+											"key": "nomeJogador",
+											"value": "Mario"
+										},
+										{
+											"key": "objeto",
+											"value": "pedra"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "remover jogada - 3 jogadas já cadastrados",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "R07NfMKH",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "poupatempo.rgdigital",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Basic YWRtaW46YWRtaW4=",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1588797475337,\r\n    \"jogadorIniciador\": {\r\n        \"id\": 1588797475337,\r\n        \"nomeJogador\": \"Mario\"\r\n    },\r\n    \"jogadores\": [\r\n        {\r\n            \"id\": 1588799167474,\r\n            \"nomeJogador\": \"Marcela\"\r\n        },\r\n        {\r\n            \"id\": 1588799683645,\r\n            \"nomeJogador\": \"Flavio\"\r\n        },\r\n        {\r\n            \"id\": 1588799772688,\r\n            \"nomeJogador\": \"Mauro\"\r\n        }\r\n    ],\r\n    \"jogadas\": [\r\n        {\r\n            \"id\": 1588803269562,\r\n            \"objeto\": \"papel\",\r\n            \"jogador\": {\r\n                \"id\": 1588803269562,\r\n                \"nomeJogador\": \"Marcela\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": 1588803324421,\r\n            \"objeto\": \"pedra\",\r\n            \"jogador\": {\r\n                \"id\": 1588803324421,\r\n                \"nomeJogador\": \"Mario\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": 1588803324999,\r\n            \"objeto\": \"tesoura\",\r\n            \"jogador\": {\r\n                \"id\": 1588803324425,\r\n                \"nomeJogador\": \"João\"\r\n            }\r\n        }\r\n        \r\n    ]\r\n}"
+								},
+								"url": {
+									"raw": "http://200.98.173.74:3034/jokenpo/removerJogada/?nomeJogador=Mario&objeto=pedra",
+									"protocol": "http",
+									"host": [
+										"200",
+										"98",
+										"173",
+										"74"
+									],
+									"port": "3034",
+									"path": [
+										"jokenpo",
+										"removerJogada",
+										""
+									],
+									"query": [
+										{
+											"key": "nomeJogador",
+											"value": "Mario"
+										},
+										{
+											"key": "objeto",
+											"value": "pedra"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "remover jogada - 3 jogadas já cadastrados - jogada inexiste",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "R07NfMKH",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "poupatempo.rgdigital",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Basic YWRtaW46YWRtaW4=",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1588797475337,\r\n    \"jogadorIniciador\": {\r\n        \"id\": 1588797475337,\r\n        \"nomeJogador\": \"Mario\"\r\n    },\r\n    \"jogadores\": [\r\n        {\r\n            \"id\": 1588799167474,\r\n            \"nomeJogador\": \"Marcela\"\r\n        },\r\n        {\r\n            \"id\": 1588799683645,\r\n            \"nomeJogador\": \"Flavio\"\r\n        },\r\n        {\r\n            \"id\": 1588799772688,\r\n            \"nomeJogador\": \"Mauro\"\r\n        }\r\n    ],\r\n    \"jogadas\": [\r\n        {\r\n            \"id\": 1588803269562,\r\n            \"objeto\": \"papel\",\r\n            \"jogador\": {\r\n                \"id\": 1588803269562,\r\n                \"nomeJogador\": \"Marcela\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": 1588803324421,\r\n            \"objeto\": \"pedra\",\r\n            \"jogador\": {\r\n                \"id\": 1588803324421,\r\n                \"nomeJogador\": \"Mario\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": 1588803324999,\r\n            \"objeto\": \"tesoura\",\r\n            \"jogador\": {\r\n                \"id\": 1588803324425,\r\n                \"nomeJogador\": \"João\"\r\n            }\r\n        }\r\n    ]\r\n\t\r\n}"
+								},
+								"url": {
+									"raw": "http://200.98.173.74:3034/jokenpo/removerJogada/?nomeJogador=Mario&objeto=pedra",
+									"protocol": "http",
+									"host": [
+										"200",
+										"98",
+										"173",
+										"74"
+									],
+									"port": "3034",
+									"path": [
+										"jokenpo",
+										"removerJogada",
+										""
+									],
+									"query": [
+										{
+											"key": "nomeJogador",
+											"value": "Mario"
+										},
+										{
+											"key": "objeto",
+											"value": "pedra"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "935ab138-688c-42a1-9cf1-01e7ae16e0df",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "96950cb3-a5f6-4105-a7f0-fe3120f3e5fc",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "obter resultado - combinação 1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "R07NfMKH",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "poupatempo.rgdigital",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Basic YWRtaW46YWRtaW4=",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1588797475337,\r\n    \"jogadorIniciador\": {\r\n        \"id\": 1588797475337,\r\n        \"nomeJogador\": \"Mario\"\r\n    },\r\n    \"jogadores\": [\r\n        {\r\n            \"id\": 1588799167474,\r\n            \"nomeJogador\": \"Marcela\"\r\n        },\r\n        {\r\n            \"id\": 1588799167444,\r\n            \"nomeJogador\": \"Silva\"\r\n        },\r\n        {\r\n            \"id\": 1588799683645,\r\n            \"nomeJogador\": \"Flavio\"\r\n        }\r\n    ],\r\n    \"jogadas\": [\r\n        {\r\n            \"id\": 1588803269562,\r\n            \"objeto\": \"papel\",\r\n            \"jogador\": {\r\n                \"id\": 1588803269562,\r\n                \"nomeJogador\": \"Marcela\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": 1588803324421,\r\n            \"objeto\": \"pedra\",\r\n            \"jogador\": {\r\n                \"id\": 1588803324421,\r\n                \"nomeJogador\": \"Silva\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": 1000803324421,\r\n            \"objeto\": \"tesoura\",\r\n            \"jogador\": {\r\n                \"id\": 1588803324421,\r\n                \"nomeJogador\": \"Flavio\"\r\n            }\r\n        }\r\n\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "http://200.98.173.74:3034/jokenpo/obterResultado",
+							"protocol": "http",
+							"host": [
+								"200",
+								"98",
+								"173",
+								"74"
+							],
+							"port": "3034",
+							"path": [
+								"jokenpo",
+								"obterResultado"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obter resultado - combinação 2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "R07NfMKH",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "poupatempo.rgdigital",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Basic YWRtaW46YWRtaW4=",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1588797475337,\r\n    \"jogadorIniciador\": {\r\n        \"id\": 1588797475337,\r\n        \"nomeJogador\": \"Mario\"\r\n    },\r\n    \"jogadores\": [\r\n        {\r\n            \"id\": 1588799167474,\r\n            \"nomeJogador\": \"Marcela\"\r\n        },\r\n        {\r\n            \"id\": 1588799167444,\r\n            \"nomeJogador\": \"Silva\"\r\n        },\r\n        {\r\n            \"id\": 1588799683645,\r\n            \"nomeJogador\": \"Flavio\"\r\n        }\r\n    ],\r\n    \"jogadas\": [\r\n        {\r\n            \"id\": 1588803269562,\r\n            \"objeto\": \"pedra\",\r\n            \"jogador\": {\r\n                \"id\": 1588803269562,\r\n                \"nomeJogador\": \"Marcela\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": 1588803324421,\r\n            \"objeto\": \"papel\",\r\n            \"jogador\": {\r\n                \"id\": 1588803324421,\r\n                \"nomeJogador\": \"Silva\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": 1000803324421,\r\n            \"objeto\": \"tesoura\",\r\n            \"jogador\": {\r\n                \"id\": 1588803324421,\r\n                \"nomeJogador\": \"Flavio\"\r\n            }\r\n        }\r\n\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "http://200.98.173.74:3034/jokenpo/obterResultado",
+							"protocol": "http",
+							"host": [
+								"200",
+								"98",
+								"173",
+								"74"
+							],
+							"port": "3034",
+							"path": [
+								"jokenpo",
+								"obterResultado"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obter resultado - combinação 3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "R07NfMKH",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "poupatempo.rgdigital",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Basic YWRtaW46YWRtaW4=",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1588797475337,\r\n    \"jogadorIniciador\": {\r\n        \"id\": 1588797475337,\r\n        \"nomeJogador\": \"Mario\"\r\n    },\r\n    \"jogadores\": [\r\n        {\r\n            \"id\": 1588799167474,\r\n            \"nomeJogador\": \"Marcela\"\r\n        },\r\n        {\r\n            \"id\": 1588799167444,\r\n            \"nomeJogador\": \"Silva\"\r\n        },\r\n        {\r\n            \"id\": 1588799683645,\r\n            \"nomeJogador\": \"Flavio\"\r\n        }\r\n    ],\r\n    \"jogadas\": [\r\n        {\r\n            \"id\": 1588803269562,\r\n            \"objeto\": \"tesoura\",\r\n            \"jogador\": {\r\n                \"id\": 1588803269562,\r\n                \"nomeJogador\": \"Marcela\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": 1588803324421,\r\n            \"objeto\": \"papel\",\r\n            \"jogador\": {\r\n                \"id\": 1588803324421,\r\n                \"nomeJogador\": \"Silva\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": 1000803324421,\r\n            \"objeto\": \"papel\",\r\n            \"jogador\": {\r\n                \"id\": 1588803324421,\r\n                \"nomeJogador\": \"Flavio\"\r\n            }\r\n        }\r\n\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "http://200.98.173.74:3034/jokenpo/obterResultado",
+							"protocol": "http",
+							"host": [
+								"200",
+								"98",
+								"173",
+								"74"
+							],
+							"port": "3034",
+							"path": [
+								"jokenpo",
+								"obterResultado"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "inicializar partida",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "R07NfMKH",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "poupatempo.rgdigital",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Basic YWRtaW46YWRtaW4=",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1588797475337,\r\n    \"jogadorIniciador\": {\r\n        \"id\": 1588797475337,\r\n        \"nomeJogador\": \"Mario\"\r\n    },\r\n    \"jogadores\": [],\r\n    \"jogadas\": []\r\n}"
+				},
+				"url": {
+					"raw": "http://200.98.173.74:3034/jokenpo/adicionarJogador/?nomeJogador=Renata",
+					"protocol": "http",
+					"host": [
+						"200",
+						"98",
+						"173",
+						"74"
+					],
+					"port": "3034",
+					"path": [
+						"jokenpo",
+						"adicionarJogador",
+						""
+					],
+					"query": [
+						{
+							"key": "nomeJogador",
+							"value": "Renata"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.4/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen"/>
+
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+            th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+
+    <link href="../../static/css/guru.css"
+          th:href="@{css/guru.css}" rel="stylesheet" media="screen"/>
+          
+    <link href="../static/css/menu.css"
+          th:href="@{/css/menu.css}" rel="stylesheet" media="screen"/>
+
+    <link href="../static/css/dashboard.css"
+          th:href="@{/css/dashboard.css}" rel="stylesheet" media="screen"/>
+
+    <script src="../../static/js/menu.js" th:src="@{js/menu.js}"></script>
+    <script src="../../static/js/dashboard.js" th:src="@{js/dashboard.js}"></script>
+          
+          
+
+    
+</head>
+<body>
+
+<div class="container">
+    <div th:fragment="header">
+        <div class="row text-left" style="margin-top: 15px; margin-bottom: 15px;">
+        	<div style="float: left;">
+	            <img style="margin-right: 15px;" src="../../static/images/cet_logo.png" width="100"
+	                 th:src="@{/images/cet_logo.png}"/>
+        	</div>
+        	<div>
+               <h3 style="margin-top: 10px;">Despacho Gráfico de Ocorrências</h3>
+        	</div>
+        </div>
+         <div class="container-fluid">
+			<div id="mySidenav" class="sidenav">
+			  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			  <span style="margin-left: 30px;color: white;">Opções:</span><br/><br/>
+			  <a href="javascript:alternarTick('filtro')"><i id="tick_filtro" class="glyphicon glyphicon-ok-sign tick_verde"></i><i class="glyphicon glyphicon-filter"></i>&nbsp;Filtro</a>
+			  <a href="javascript:alternarTick('endereco')"><i id="tick_endereco" class="glyphicon glyphicon-ok-sign tick_verde"></i><i class="glyphicon glyphicon-search"></i>&nbsp;Pesquisar Endereço</a>
+			  <a href="javascript:alternarTick('legenda')"><i id="tick_legenda" class="glyphicon glyphicon-ok-sign tick_verde"></i><i class="glyphicon glyphicon-list"></i>&nbsp;Legenda</a>
+			  <a href="javascript:alternarTick('mapa')"><i id="tick_mapa" class="glyphicon glyphicon-ok-sign tick_verde"></i><i class="glyphicon glyphicon-globe"></i>&nbsp;Mapa</a>
+			  <a href="javascript:alternarTick('ocorrencias')"><i id="tick_ocorrencias" class="glyphicon glyphicon-ok-sign tick_verde"></i><i class="glyphicon glyphicon-exclamation-sign"></i>&nbsp;Ocorrências</a>
+			  <a href="javascript:alternarTick('recursos')"><i id="tick_recursos" class="glyphicon glyphicon-ok-sign tick_verde"></i><i class="glyphicon glyphicon-user"></i>&nbsp;Recursos</a>
+
+			  <br/><br/><span style="margin-left: 30px;color: white;">Layout:</span><br/><br/>
+			  <a href="javascript:resetarLayout()"><i class="glyphicon glyphicon-refresh"></i>&nbsp;Resetar</a>
+			  <a href="javascript:salvarLayout()"><i class="glyphicon glyphicon-upload"></i>&nbsp;Salvar Layout do Usuário</a>
+			  <a href="javascript:carregarLayout()"><i class="glyphicon glyphicon-download-alt"></i>&nbsp;Recuperar Layout do Usuário</a>
+
+			</div>                
+		             
+			<span style="font-size:22px;cursor:pointer" onclick="openNav()">&#9776; Opções</span>
+		             
+         </div>
+         
+
+		<div class="row" style="margin-top: 15px;">
+		
+		    <div class="col-sm-4">
+			    <div id="panelDrag_filtro" class="panel-shadow panel panel-default panel-ajuste panel-resizable">
+				      <div id="panelDrag_filtro_header" class="panel-heading panel-heading-filtro"><i class="glyphicon glyphicon-filter"></i>&nbsp;Filtro</div>
+				      <div class="panel-body text-center panel-body-custom" >
+							
+							<a href="#" id="btnQuem" class="btn btn-info btn-filtro">Quem</a>
+							<a href="#" id="btnOnde" class="btn btn-info btn-filtro">Onde</a>
+							<a href="#" id="btnOcorrencias" class="btn btn-info btn-filtro">Ocorrências</a>
+							<a href="#" id="btnRecursos" class="btn btn-info btn-filtro">Recursos</a>
+						  	<div id="divQuem" class="text-muted">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							</div>
+						  	<div id="divOnde" class="collapse-display text-muted">
+Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, consectetur adipiscing elit.
+							</div>
+						  	<div id="divOcorrencias" class="collapse-display text-muted">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							</div>
+						  	<div id="divRecursos" class="collapse-display text-muted">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut..
+							</div>
+								      
+				      </div>
+				  </div>
+		    </div>
+		    <div class="col-sm-4">
+			    <div id="panelDrag_endereco" class="panel-shadow panel panel-default panel-ajuste panel-resizable">
+				      <div id="panelDrag_endereco_header" class="panel-heading panel-heading-endereco"><i class="glyphicon glyphicon-search"></i>&nbsp;Pesquisar Endereço</div>
+				      <div class="panel-body panel-body-custom">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					  </div>
+				</div>
+		    </div>
+		    <div class="col-sm-4">
+			    <div id="panelDrag_legenda" class="panel-shadow panel panel-default panel-ajuste panel-resizable">
+				      <div id="panelDrag_legenda_header" class="panel-heading panel-heading-legenda"><i class="glyphicon glyphicon-list"></i>&nbsp;Legenda</div>
+				      <div class="panel-body panel-body-custom">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				      </div>
+				</div>
+		    </div>
+		    <div class="col-sm-12">
+			    <div id="panelDrag_mapa" class="panel-shadow panel panel-default panel-ajuste-mapa panel-resizable">
+				      <div id="panelDrag_mapa_header" class="panel-heading panel-heading-mapa"><i class="glyphicon glyphicon-globe"></i>&nbsp;Mapa</div>
+				      <div class="panel-body panel-body-custom-mapa">
+
+							<center>
+								<img src="../../static/images/mapa_exemplo.png" width="500"
+									                 th:src="@{/images/mapa_exemplo.png}"/>
+							</center>
+				      </div>
+				</div>
+		    </div>
+		    <div class="col-sm-6">
+			    <div id="panelDrag_ocorrencias" class="panel-shadow panel panel-default panel-ajuste panel-resizable">
+				      <div id="panelDrag_ocorrencias_header" class="panel-heading panel-heading-ocorrencias"><i class="glyphicon glyphicon-exclamation-sign"></i>&nbsp;Ocorrências</div>
+				      <div class="panel-body panel-body-custom">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				      
+				      </div>
+				</div>
+		    </div>
+		    <div class="col-sm-6">
+			    <div id="panelDrag_recursos" class="panel-shadow panel panel-default panel-ajuste panel-resizable">
+				      <div id="panelDrag_recursos_header" class="panel-heading panel-heading-recursos"><i class="glyphicon glyphicon-user"></i>&nbsp;Recursos</div>
+				      <div class="panel-body panel-body-custom">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				      
+				      </div>
+				</div>
+		    </div>
+		</div>
+
+    </div>
+</div>
+
+
+
+
+
+</body>
+</html>

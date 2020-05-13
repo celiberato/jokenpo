@@ -1,0 +1,28 @@
+server:
+  port: 3035
+  servlet:
+    context-path: /pedidos
+
+spring:
+  application:
+    name: pedidos-api
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://192.168.99.100:5433/postgres
+    username: postgres
+    password: mysecretpassword
+  jpa:
+    show-sql: true
+    generate-ddl: false
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+        use_sql_comments: false
+        generate_statistics: true
+  main:
+    banner-mode: "OFF"
+    allow-bean-definition-overriding: true

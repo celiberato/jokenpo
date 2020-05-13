@@ -1,0 +1,148 @@
+body{width:90%;margin:auto;min-width:600px;max-width:2000px !important}
+
+.panel-default > .panel-heading-filtro {
+	background: #EC7063; color: #000; 
+	width: 100%;
+}
+
+.panel-default > .panel-heading-mapa {
+	background: #A9CCE3; color: #000; 
+	padding-right: 0px;
+}
+
+.panel-default > .panel-heading-endereco {
+	background: #B9770E; color: #000; 
+	padding-right: 0px;
+}
+
+.panel-default > .panel-heading-ocorrencias {
+	background: #F7DC6F; color: #000; 
+	padding-right: 0px;
+}
+
+.panel-default > .panel-heading-recursos {
+	background: #F6DDCC; color: #000; 
+	padding-right: 0px;
+}
+
+.panel-default > .panel-heading-legenda {
+	background: #27AE60; color: #000; 
+	padding-right: 0px;
+}
+
+.btn-filtro {
+	font-size: 12px;
+	background: #D5F5E3; color: #000; 
+}
+
+.panel-active {
+	padding: 0 0 0 0;
+}
+
+.collapse-display {
+	display: none;
+	width: 30px;
+}
+
+
+.btn-filtro {
+	font-size: 12px;
+}
+
+.panel-ajuste {
+	margin-right: 5px; width: 105%;
+}
+.panel-ajuste-mapa {
+	width: 107%;
+}
+.panel-body-custom {
+	height: 130px;
+}
+
+.panel-body-custom-mapa {
+	height: 300px;
+}
+
+
+
+#panelDrag_filtro {
+  position: absolute;
+  z-index: 9;
+  top: 10px;
+}
+#panelDrag_filtro_header {
+  cursor: move;
+  z-index: 10;
+}
+
+#panelDrag_endereco {
+  position: absolute;
+  z-index: 10;
+  top: 10px;
+  left: 45px;
+}
+#panelDrag_endereco_header {
+  cursor: move;
+  z-index: 10;
+}
+
+#panelDrag_legenda {
+  position: absolute;
+  z-index: 12;
+  top: 10px;
+  left: 80px;
+}
+#panelDrag_legenda_header {
+  cursor: move;
+  z-index: 13;
+}
+
+
+#panelDrag_mapa {
+  position: absolute;
+  z-index: 0;
+  top: 190px;
+}
+#panelDrag_mapa_header {
+  cursor: move;
+  z-index: 0;
+}
+
+#panelDrag_ocorrencias {
+  position: absolute;
+  z-index: 16;
+  top: 540px;
+}
+#panelDrag_ocorrencias_header {
+  cursor: move;
+  z-index: 17;
+}
+
+
+#panelDrag_recursos {
+  position: absolute;
+  z-index: 18;
+  top: 540px;
+}
+#panelDrag_recursos_header {
+  cursor: move;
+  z-index: 19;
+}
+
+.panel-resizable {
+    resize: both;
+  	overflow: auto;
+}
+
+.panel-visible {
+	display: block;
+}
+
+.panel-invisible {
+	display: none;
+}
+
+.panel-shadow{
+	color: white;
+  	box-shadow: 2px 2px 4px #EAECEE, 0 0 10px #EAECEE, 0 0 5px #34495E;
+}
