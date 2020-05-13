@@ -1,5 +1,5 @@
 # Checkout do jogo Jokenpo aqui!
-[Jokenpo!](https://gitlab.com/celiberato/jokenpo)
+[Jokenpo!](https://github.com/celiberato/jokenpo)
 
 # Como testar a API?
 
@@ -7,7 +7,7 @@
 https://www.postman.com/downloads/
 
 #### Importe o arquivo exportado do postman, no seguinte link:
-https://gitlab.com/celiberato/jokenpo/-/blob/master/postman/jokenpo.postman_collection.json
+https://github.com/celiberato/jokenpo/-/blob/master/postman/jokenpo.postman_collection.json
 
 # Como executar teste untários:
 
@@ -15,7 +15,7 @@ https://gitlab.com/celiberato/jokenpo/-/blob/master/postman/jokenpo.postman_coll
 https://spring.io/tools
 
 #### Clone o projeto para uma pasta do disco
-https://gitlab.com/celiberato/jokenpo
+https://github.com/celiberato/jokenpo
 
 #### Execute o maven update do projeto
 
